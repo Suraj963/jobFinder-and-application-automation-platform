@@ -1,0 +1,63 @@
+/* HomeAnimations.css */
+
+@keyframes lightning {
+  0% {
+    filter: brightness(1.1) drop-shadow(0 0 8px #00eaff);
+    color: #fff;
+  }
+  20% {
+    filter: brightness(1.5) drop-shadow(0 0 16px #00eaff);
+    color: #38bdf8;
+  }
+  40% {
+    filter: brightness(1.2) drop-shadow(0 0 12px #a21caf);
+    color: #a21caf;
+  }
+  60% {
+    filter: brightness(1.7) drop-shadow(0 0 20px #facc15);
+    color: #facc15;
+  }
+  80% {
+    filter: brightness(1.3) drop-shadow(0 0 14px #22d3ee);
+    color: #22d3ee;
+  }
+  100% {
+    filter: brightness(1.1) drop-shadow(0 0 8px #00eaff);
+    color: #fff;
+  }
+}
+
+@keyframes card-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-lightning {
+  animation: lightning 2.5s infinite alternate;
+}
+
+.animate-card-fade {
+  animation: card-fade 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+.animated-input {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.animated-input:focus {
+  box-shadow: 0 0 12px 2px #38bdf8, 0 0 0 4px #2563eb33;
+  transform: scale(1.04);
+}
+
+.animated-dropdown {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.animated-dropdown:focus, .animated-dropdown:hover {
+  box-shadow: 0 0 12px 2px #a21caf, 0 0 0 4px #f472b633;
+  transform: scale(1.04);
+}
